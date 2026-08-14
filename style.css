@@ -89,7 +89,7 @@ section li {
 
 
 video {
-    width: 500px;
+    width: 400px;
     max-width: 100%;
     display: block;
     margin: 20px auto;
@@ -105,7 +105,7 @@ video {
 }
 
 .graficos img {
-    width: 300px;
+    width: 500px;
     height: auto;
     border: 2px solid #5BBE42;
     border-radius: 10px;
