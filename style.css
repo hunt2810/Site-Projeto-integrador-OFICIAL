@@ -1,61 +1,41 @@
 body {
-    background-color: black;
     color: white;
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-nav {
-    padding: 10px;
 }
 
 ul {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-    padding: 10px;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 20px;
 }
 
-nav a {
+a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-}
-
-nav a:hover {
-    color: #5BBE42;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+    margin: 20px;
+    text-align: center;
 }
 
 .center {
     text-align: center;
 }
 
-
-
-header img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid #5BBE42;
-}
-
-
-
 h1 {
     color: #5BBE42;
     text-align: center;
 }
 
+img {
+    width: 40px;
+    height: 40px;
+}
+
 h2 {
-    color: #5BBE42;
     text-align: center;
+    color: white;
 }
 
 h3 {
@@ -63,63 +43,42 @@ h3 {
 }
 
 
-
-p {
-    line-height: 1.6;
-    padding: 10px;
+a {
+    margin: 20px;
+    text-align: center;
 }
 
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #5BBE42;
+    display: block;
+    margin: auto;
+}
 
+p {
+    margin-top: 2px;
+    color: white;
+    margin: auto;
+    padding: 20px;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #0ce7ca;
+}
 
 section {
     margin-bottom: 40px;
 }
 
-
-
-section ul {
-    display: block;
-    padding: 10px 30px;
-}
-
-section li {
-    margin-bottom: 10px;
-}
-
-
-
 video {
-    width: 400px;
+    width: 500px;
     max-width: 100%;
     display: block;
-    margin: 20px auto;
-}
-
-
-
-.graficos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 30px;
-    width: 95%;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-.graficos img {
-    width: 100%;
-    height: auto;
-    border: 3px solid #5BBE42;
-    border-radius: 10px;
-    display: block;
-}
-
-
-
-footer {
-    text-align: center;
-    border-top: 1px solid #5BBE42;
-    margin-top: 30px;
-    padding: 20px;
+    margin: auto;
 }
