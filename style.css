@@ -101,13 +101,15 @@ video {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 60px;
+    padding: 20px;
 }
 
 .graficos img {
-    width: 600px;
+    width: 800px;
+    max-width: 95%;
     height: auto;
-    border: 2px solid #5BBE42;
+    border: 3px solid #5BBE42;
     border-radius: 10px;
 }
 
