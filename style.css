@@ -28,10 +28,6 @@ h1 {
     text-align: center;
 }
 
-img {
-    width: 40px;
-    height: 40px;
-}
 
 h2 {
     text-align: center;
@@ -48,14 +44,25 @@ a {
     text-align: center;
 }
 
-img {
-    width: 300px;
-    height: 300px;
+.grafico {
+    width: 600px;
+    max-width: 90%;
+    height: auto;
     border-radius: 20px;
     border: 4px solid #5BBE42;
     display: block;
-    margin: 20px auto;
-    object-fit: cover;
+    margin: 30px auto;
+}
+
+
+.foto-projeto {
+    width: 600px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid #5BBE42;
+    display: block;
+    margin: 30px auto;
 }
 
 p {
