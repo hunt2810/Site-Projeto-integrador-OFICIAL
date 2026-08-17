@@ -134,33 +134,51 @@
                 Detector de Presença com Sensor PIR
             </h2>
 
-            <p>
-                <strong>Desafio:</strong> Desenvolver um protótipo com Arduino e Sensor PIR para detectar movimento/presença, acionando sinal luminoso e sonoro — aplicável em automação residencial, segurança e acessibilidade.
+                    <p>
+            Desenvolver um protótipo com Arduino e Sensor PIR para detectar
+            movimento/presença, acionando sinal luminoso e sonoro — aplicável em
+            automação residencial, segurança e acessibilidade.
+        </p>
 
-                Materiais Utilizados:
+        <h3>Materiais Utilizados</h3>
 
-                - Placa Arduino Uno R3
-        - 01 Módulo Mini Sensor de Movimento/Presença PIR
-        - 01 LED (5mm)
-        - 01 Buzzer (para aviso sonoro)
-        - Resistor de 220Ω
-        - Jumpers Macho-Macho e Fêmea-Fêmea
-        - Protoboard
-        
-        Montagem das Conexões
-        
-        - Sensor PIR:
-        - VCC → 5V do Arduino
-        - GND → GND do Arduino
-        - OUT → Pino 8
-        - LED: Anodo (+) → Pino 13 | Catodo (-) → GND (via resistor)
-        - Buzzer: Positivo → Pino 7 | Negativo → GND
-            </p>
+        <ul>
+            <li>Placa Arduino Uno R3</li>
+            <li>01 Módulo Mini Sensor de Movimento/Presença PIR</li>
+            <li>01 LED (5mm)</li>
+            <li>01 Buzzer (para aviso sonoro)</li>
+            <li>Resistor de 220Ω</li>
+            <li>Jumpers Macho-Macho e Fêmea-Fêmea</li>
+            <li>Protoboard</li>
+        </ul>
 
-            <p>
-                <strong>Código de Programação:</strong> arduino
-  
-        /* Projeto: Detector de Presença - Sensor PIR */
+        <h3>Montagem das Conexões</h3>
+
+        <h4>Sensor PIR</h4>
+
+        <ul>
+            <li>VCC → 5V do Arduino</li>
+            <li>GND → GND do Arduino</li>
+            <li>OUT → Pino 8</li>
+        </ul>
+
+        <h4>LED</h4>
+
+        <ul>
+            <li>Ânodo (+) → Pino 13</li>
+            <li>Cátodo (-) → GND (via resistor)</li>
+        </ul>
+
+        <h4>Buzzer</h4>
+
+        <ul>
+            <li>Positivo → Pino 7</li>
+            <li>Negativo → GND</li>
+        </ul>
+
+        <h3>Código de Programação</h3>
+
+        <pre><code>// Projeto: Detector de Presença - Sensor PIR
 
         // Definir pinos
         const int Pino_Sensor = 8;
@@ -168,38 +186,41 @@
         const int Pino_Buzzer = 7;
 
         void setup() {
-        // Configurar pinos
-        pinMode(Pino_Sensor, INPUT);
-        pinMode(Pino_LED, OUTPUT);
-        pinMode(Pino_Buzzer, OUTPUT);
+            // Configurar pinos
+            pinMode(Pino_Sensor, INPUT);
+            pinMode(Pino_LED, OUTPUT);
+            pinMode(Pino_Buzzer, OUTPUT);
         }
 
         void loop() {
-        // Verificar se detectou movimento/presença
-        if (digitalRead(Pino_Sensor) == HIGH) {
-            // Acionar LED e som
-            digitalWrite(Pino_LED, HIGH);
-            tone(Pino_Buzzer, 1000); // Som de 1000Hz
-            delay(5000); // Permanecer aceso por 5 segundos
-            noTone(Pino_Buzzer);
-        } 
-        else {
-            // Desligar quando não houver movimento
-            digitalWrite(Pino_LED, LOW);
-        }
-        delay(100); // Pequena pausa
-        }
+            // Verificar se detectou movimento/presença
+            if (digitalRead(Pino_Sensor) == HIGH) {
 
-            </p>
+                // Acionar LED e som
+                digitalWrite(Pino_LED, HIGH);
+                tone(Pino_Buzzer, 1000); // Som de 1000Hz
+
+                delay(5000); // Permanecer aceso por 5 segundos
+
+                noTone(Pino_Buzzer);
+            } 
+            else {
+
+                // Desligar quando não houver movimento
+                digitalWrite(Pino_LED, LOW);
+            }
+
+            delay(100); // Pequena pausa
+        }</code></pre>
         <p>
          <strong>Explicação do Funcionamento:</strong> O Sensor PIR (Infravermelho Passivo) funciona detectando a radiação infravermelha emitida por corpos quentes (como seres humanos). Ele capta a diferença de temperatura na área monitorada:
+        <br>
+        - Quando detecta presença/movimento: envia sinal para o Arduino → acende o LED e ativa o buzzer por 5 segundos. <br>
+        - Quando não detecta: mantém LED e som desligados, economizando energia. <br>
         
-        - Quando detecta presença/movimento: envia sinal para o Arduino → acende o LED e ativa o buzzer por 5 segundos.
-        - Quando não detecta: mantém LED e som desligados, economizando energia.
-        
-        É um dispositivo simples, barato e eficaz — usado em luzes automáticas, alarmes e segurança!
+        É um dispositivo simples, barato e eficaz — usado em luzes automáticas, alarmes e segurança! <br>
 
-         <strong>Resultado Final:</strong> O protótipo funciona perfeitamente: ao passar na frente do sensor, ele identifica a presença e avisa com luz e som. Cumpre o objetivo de aplicar conceitos de eletrônica e programação com o sensor estudado na aula, desenvolvendo pensamento lógico e habilidades de robótica.
+         <strong>Resultado Final:</strong>  O protótipo funciona perfeitamente: ao passar na frente do sensor, ele identifica a presença e avisa com luz e som. Cumpre o objetivo de aplicar conceitos de eletrônica e programação com o sensor estudado na aula, desenvolvendo pensamento lógico e habilidades de robótica.
             </p>
 
 
